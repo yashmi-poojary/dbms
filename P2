@@ -1,0 +1,17 @@
+create table SALESMAN( salesman_id int, name varchar(10), city varchar(10), commission int, primary key(salesman_id) );
+create table CUSTOMER( customer_id int, customer_name varchar(10), city varchar(10), grade int, primary key(customer_id),salesman_id int, foreign key(salesman_id ) references SALESMAN(salesman_id) ON delete cascade ON update cascade);
+create table ORDERS( order_no int primary key, purchase_amt int, order_date date, salesman_id int, customer_id int , foreign key(salesman_id ) references SALESMAN(salesman_id) ON delete cascade ON update cascade, foreign key(customer_id ) references CUSTOMER(customer_id) ON delete cascade ON update cascade);
+
+insert into SALESMAN values(10, "AKASH", "MANGALORE", 2);
+insert into SALESMAN values(20, "RAJ", "BANGALORE", 10);
+insert into SALESMAN values(30, "RAM", "MANGALORE", 5);
+insert into SALESMAN values(40, "KIRAN", "MYSORE", 15);
+insert into SALESMAN values(50, "SHREYA", "BANGALORE", 3);
+
+insert into CUSTOMER values(1000, "AVINASH", "MANGALORE", 400, 10);
+insert into CUSTOMER values(2000, "KUMAR", "UDUPI", 200, 20);
+insert into CUSTOMER values(3000, "PREETHI", "MYSORE", 300, 40);
+insert into CUSTOMER values(4000, "SMITHA", "MANGALORE", 300, 30);
+insert into CUSTOMER values(5000, "VARSHINI", "MYSORE", 400, 50);
+
+insert into ORDERS values(551, 4756 , "2020-01-04", 1000, 10);
