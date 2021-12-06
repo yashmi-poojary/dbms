@@ -14,4 +14,8 @@ insert into CUSTOMER values(3000, "PREETHI", "MYSORE", 300, 40);
 insert into CUSTOMER values(4000, "SMITHA", "MANGALORE", 300, 30);
 insert into CUSTOMER values(5000, "VARSHINI", "MYSORE", 400, 50);
 
-insert into ORDERS values(551, 4756 , "2020-01-04", 1000, 10);
+insert into ORDERS values(551, 5000 , "2020-01-04", 1000, 10);
+insert into ORDERS values(552, 2500 , "2020-02-20", 2000, 20);
+insert into ORDERS values(553, 500 , "2020-03-20", 3000, 40);
+insert into ORDERS values(554, 1500 , "2020-04-20", 4000, 30);
+insert into ORDERS values(555, 2000 , "2020-05-20", 2000, 10);
