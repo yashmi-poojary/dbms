@@ -4,3 +4,17 @@ create table Movie( mov_id int, mov_title varchar(15), mov_lang varchar(15), dir
 create table Movie_cast( act_id int, mov_id int, role varchar(15), primary key(act_id, mov_id), foreign key(act_id) references Actor(act_id) ON
 delete cascade ON update cascade, foreign key(mov_id) references Movie(mov_id) ON delete cascade ON update cascade );
  create table Rating (mov_id int primary key, rev_stars int, foreign key(mov_id) references Movie(mov_id) ON delete cascade ON update cascade);
+
+
+insert into Actor values(1, "VICKY", "MALE");
+insert into Actor values(2, "ANUSHKA", "FEMALE");
+insert into Actor values(3, "JANHVI", "FEMALE");
+ insert into Actor values(4, "RANBIR", "MALE");
+insert into Actor values(5, "KATRINA", "FEMALE");
+
+insert into Director values( 10, "HITCHCOCK", 9876512340);
+insert into Director values( 20, "SAJID N", 9876662340);
+ insert into Director values( 30, "STEPHEN SPIBERG", 9876667740);
+ insert into Director values( 40, "ROHITH SHETTY", 9076667740);
+insert into Director values( 50, "FARAH KHAN", 9076665710);
+
