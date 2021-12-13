@@ -1,0 +1,6 @@
+create table Actor( act_id int, act_name varchar(15), act_gender varchar(15), primary key(act_id) );
+ create table Director( dir_id int, dir_name varchar(15), dir_phone varchar(15), primary key(dir_id) );
+create table Movie( mov_id int, mov_title varchar(15), mov_lang varchar(15), dir_id int, primary key(mov_id), foreign key(dir_id) references Director(dir_id) ON delete cascade ON update cascade );
+create table Movie_cast( act_id int, mov_id int, role varchar(15), primary key(act_id, mov_id), foreign key(act_id) references Actor(act_id) ON
+delete cascade ON update cascade, foreign key(mov_id) references Movie(mov_id) ON delete cascade ON update cascade );
+ create table Rating (mov_id int primary key, rev_stars int, foreign key(mov_id) references Movie(mov_id) ON delete cascade ON update cascade);
